@@ -13,7 +13,7 @@ where
     read_num_with_delimiters(io, DELIMITERS)
 }
 
-pub fn read_num_with_delimiters<T>(io: &Stdin, delimeters: &str) -> Result<T, <T as FromStr>::Err>
+pub fn read_num_with_delimiters<T>(io: &Stdin, delimiters: &str) -> Result<T, <T as FromStr>::Err>
 where
     T: Num + FromStr,
 {
@@ -28,7 +28,7 @@ where
             }
         }
         let c = c[0] as char;
-        if delimeters.contains(c) {
+        if delimiters.contains(c) {
             break;
         }
         num_str.push(c);
@@ -51,13 +51,13 @@ where
     }
 }
 
-pub fn read_and_handle_with_delimiters<T>(io: &Stdin, delimeters: &str) -> T
+pub fn read_and_handle_with_delimiters<T>(io: &Stdin, delimiters: &str) -> T
 where
     T: Num + FromStr,
     <T as FromStr>::Err: std::fmt::Display,
 {
     loop {
-        match read_num_with_delimiters::<T>(io, delimeters) {
+        match read_num_with_delimiters::<T>(io, delimiters) {
             Ok(v) => break v,
             Err(err) => {
                 println!("Error parsing number: \"{}\"", err);
