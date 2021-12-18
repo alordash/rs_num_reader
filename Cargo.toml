@@ -3,6 +3,12 @@ name = "num_reader"
 version = "0.1.0"
 edition = "2021"
 
+license = "MIT"
+description = "Small lib for automating reading numbers from stdin"
+homepage = "https://github.com/alordash/rs_num_reader"
+repository = "https://github.com/alordash/rs_num_reader"
+readme = "README.md"
+
 [[bin]]
 name = "num_reader"
 path = "src/num_reader.rs"
