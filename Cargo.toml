@@ -9,7 +9,7 @@ homepage = "https://github.com/alordash/rs_num_reader"
 repository = "https://github.com/alordash/rs_num_reader"
 readme = "README.md"
 
-[[bin]]
+[lib]
 name = "num_reader"
 path = "src/num_reader.rs"
 
