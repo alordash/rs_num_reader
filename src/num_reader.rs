@@ -4,7 +4,7 @@ use std::{
     str::FromStr,
 };
 
-pub const DELIMITERS: &'static str = " \n,";
+pub const DELIMITERS: &'static str = " \r\n,";
 
 pub fn read_num<T>(io: &Stdin) -> Result<T, <T as FromStr>::Err>
 where
