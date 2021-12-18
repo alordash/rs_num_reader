@@ -29,6 +29,9 @@ where
         }
         let c = c[0] as char;
         if delimiters.contains(c) {
+            if num_str.len() == 0 {
+                continue;
+            }
             break;
         }
         num_str.push(c);
