@@ -74,20 +74,3 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
-
-fn main() {
-    let stdin = std::io::stdin();
-    print!("Hello, world! ");
-    loop {
-        println!("Enter i32 number:");
-        let n: f32 = loop {
-            match read_num(&stdin) {
-                Ok(v) => break v,
-                Err(_) => {
-                    println!("Invalid number!");
-                }
-            }
-        };
-        println!("You entered: \"{}\"", n);
-    }
-}
